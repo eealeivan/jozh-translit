@@ -35,9 +35,14 @@
     <Reference Include="System.Web.Extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCharResult.cs" />
+    <Compile Include="AddCharStatus.cs" />
+    <Compile Include="TranslitData.cs" />
     <Compile Include="TransliterationMaps\EnRu.cs" />
     <Compile Include="Transliterator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransliteratorLive.cs" />
+    <Compile Include="TranslitProcessor.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

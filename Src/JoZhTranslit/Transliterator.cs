@@ -28,15 +28,15 @@ namespace JoZhTranslit
                 var addResult = processor.AddChar(c);
                 switch (addResult.Status)
                 {
-                    case TranslitProcessor.AddCharStatus.NoGraphemeFound:
+                    case AddCharStatus.NoGraphemeFound:
                         output.Append(c);
                         lastGrahemeLength = 0;
                         break;
-                    case TranslitProcessor.AddCharStatus.NewGrapheme:
+                    case AddCharStatus.NewGrapheme:
                         output.Append(addResult.Grapheme);
                         lastGrahemeLength = addResult.Grapheme.Length;
                         break;
-                    case TranslitProcessor.AddCharStatus.SubstitutePreviousGrapheme:
+                    case AddCharStatus.SubstitutePreviousGrapheme:
                         output.Remove(output.Length - lastGrahemeLength, lastGrahemeLength);
                         output.Append(addResult.Grapheme);
                         lastGrahemeLength = addResult.Grapheme.Length;

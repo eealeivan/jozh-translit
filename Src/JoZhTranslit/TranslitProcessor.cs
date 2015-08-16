@@ -47,23 +47,9 @@ namespace JoZhTranslit
             return new AddCharResult(AddCharStatus.NoGraphemeFound, null);
         }
 
-        public enum AddCharStatus
+        public void Reset()
         {
-            NoGraphemeFound,
-            NewGrapheme,
-            SubstitutePreviousGrapheme
-        }
-
-        public struct AddCharResult
-        {
-            internal AddCharResult(AddCharStatus status, string grapheme) : this()
-            {
-                Status = status;
-                Grapheme = grapheme;
-            }
-
-            public AddCharStatus Status { get; private set; }
-            public string Grapheme { get; private set; } 
+            _inGrapheme.Clear();
         }
     }
 }
