@@ -1,19 +1,18 @@
 using System.Diagnostics;
-using System.Text;
 
 namespace JoZhTranslit
 {
     internal sealed class TranslitProcessor
     {
         private readonly TranslitData _translitData;
-        private readonly StringBuilder _inGrapheme;
+        private readonly CharArray _inGrapheme;
 
         public TranslitProcessor(TranslitData translitData)
         {
             Debug.Assert(translitData != null);
             
             _translitData = translitData;
-            _inGrapheme = new StringBuilder(_translitData.MaxGraphemeLength);
+            _inGrapheme = new CharArray(_translitData.MaxGraphemeLength);
         }
 
         public AddCharResult AddChar(char c)

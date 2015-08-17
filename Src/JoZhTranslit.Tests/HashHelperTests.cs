@@ -1,5 +1,4 @@
-﻿using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace JoZhTranslit.Tests
 {
@@ -18,11 +17,23 @@ namespace JoZhTranslit.Tests
         }
 
         [Test]
-        public void GetCharCollectionHashCode_WorksForStringBuilder()
+        public void GetCharCollectionHashCode_WorksForCharArray()
         {
-            var hash1 = HashHelper.GetHashCodeAsCharArray(new StringBuilder("ab"));
-            var hash2 = HashHelper.GetHashCodeAsCharArray(new StringBuilder("ba"));
-            var hash3 = HashHelper.GetHashCodeAsCharArray(new StringBuilder("abc"));
+            var ca1 = new CharArray(2);
+            ca1.Append('a');
+            ca1.Append('b');
+            var hash1 = HashHelper.GetHashCodeAsCharArray(ca1);
+
+            var ca2 = new CharArray(2);
+            ca2.Append('b');
+            ca2.Append('a');
+            var hash2 = HashHelper.GetHashCodeAsCharArray(ca2);
+
+            var ca3 = new CharArray(3);
+            ca3.Append('a');
+            ca3.Append('b');
+            ca3.Append('c');
+            var hash3 = HashHelper.GetHashCodeAsCharArray(ca3);
 
             Assert.That(hash1, Is.Not.EqualTo(hash2));
             Assert.That(hash2, Is.Not.EqualTo(hash3));

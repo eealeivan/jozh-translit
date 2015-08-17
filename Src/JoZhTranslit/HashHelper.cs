@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace JoZhTranslit
 {
     internal sealed class HashHelper
@@ -22,19 +20,19 @@ namespace JoZhTranslit
             }
         }
 
-        public static int GetHashCodeAsCharArray(StringBuilder sb)
+        public static int GetHashCodeAsCharArray(CharArray ca)
         {
-            if (sb == null || sb.Length <= 0)
+            if (ca == null || ca.Length <= 0)
             {
                 return 0;
             }
 
             unchecked
             {
-                int hash = sb[0];
-                for (int i = 1; i < sb.Length; i++)
+                int hash = ca[0];
+                for (int i = 1; i < ca.Length; i++)
                 {
-                    hash = hash * 397 ^ sb[i];
+                    hash = hash * 397 ^ ca[i];
                 }
                 return hash;
             }
