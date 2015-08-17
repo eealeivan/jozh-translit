@@ -1,6 +1,6 @@
 ﻿namespace JoZhTranslit.TransliterationMaps
 {
-    internal class EnRu
+    public class EnRu
     {
         public const string MapJson =
             @"
