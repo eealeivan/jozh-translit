@@ -2,14 +2,12 @@ namespace JoZhTranslit
 {
     public sealed class TransliteratorLive
     {
-        private readonly TranslitData _translitData;
         private readonly TranslitProcessor _translitProcessor;
 
         public TransliteratorLive(string mapJson)
         {
-            _translitData = new TranslitData(mapJson);
-            _translitProcessor = new TranslitProcessor(
-                _translitData.FindGrapheme, _translitData.MaxGraphemeLength);
+            var translitData = new TranslitData(mapJson);
+            _translitProcessor = new TranslitProcessor(translitData);
         }
 
         public AddCharResult AddChar(char c)

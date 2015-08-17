@@ -19,7 +19,7 @@ namespace JoZhTranslit
                 return null;
             }
 
-            var processor = new TranslitProcessor(_translitData.FindGrapheme, _translitData.MaxGraphemeLength);
+            var processor = new TranslitProcessor(_translitData);
             var output = new StringBuilder();
             int lastGrahemeLength = 0;
 

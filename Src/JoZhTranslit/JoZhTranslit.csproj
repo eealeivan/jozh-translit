@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="AddCharResult.cs" />
     <Compile Include="AddCharStatus.cs" />
+    <Compile Include="HashHelper.cs" />
     <Compile Include="TranslitData.cs" />
     <Compile Include="TransliterationMaps\EnRu.cs" />
     <Compile Include="Transliterator.cs" />

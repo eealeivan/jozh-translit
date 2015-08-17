@@ -1,13 +1,12 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web.Script.Serialization;
 
 namespace JoZhTranslit
 {
     internal sealed class TranslitData
     {
-        private readonly IDictionary<string, string> _reverseMap;
+        private readonly IDictionary<int, string> _reverseMap;
         private readonly int _maxGraphemeLength;
 
         public TranslitData(string mapJson)
@@ -28,16 +27,21 @@ namespace JoZhTranslit
                 throw new Exception("Error parsing 'mapJson' argument.", e);
             }
 
-            _reverseMap = new Dictionary<string, string>();
+            _reverseMap = new Dictionary<int, string>();
+            int maxGraphemeLength = 0;
             foreach (var mapEntry in map)
             {
                 foreach (string valueEntry in mapEntry.Value)
                 {
-                    _reverseMap[valueEntry] = mapEntry.Key;
+                    _reverseMap[HashHelper.GetHashCodeAsCharArray(valueEntry)] = mapEntry.Key;
+                    if (valueEntry.Length > maxGraphemeLength)
+                    {
+                        maxGraphemeLength = valueEntry.Length;
+                    }
                 }
             }
 
-            _maxGraphemeLength = _reverseMap.Keys.Max(x => x.Length);
+            _maxGraphemeLength = maxGraphemeLength;
         }
 
         public int MaxGraphemeLength
@@ -45,10 +49,10 @@ namespace JoZhTranslit
             get { return _maxGraphemeLength; }
         }
 
-        public string FindGrapheme(string inGrapheme)
+        public string FindGrapheme(int inGraphemeHash)
         {
             string outGrapheme;
-            _reverseMap.TryGetValue(inGrapheme, out outGrapheme);
+            _reverseMap.TryGetValue(inGraphemeHash, out outGrapheme);
             return outGrapheme;
         }
     }

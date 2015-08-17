@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HashHelperTests.cs" />
     <Compile Include="TransliteratorLiveTests.cs" />
     <Compile Include="TransliteratorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
