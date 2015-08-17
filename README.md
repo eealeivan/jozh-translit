@@ -31,7 +31,7 @@ Used when you have a text and you need to transliterate it. For such operation y
 Can be connected with some input field to simulate live typing. Use [`TransliteratorLive`](https://github.com/eealeivan/jozh-translit/blob/master/Src/JoZhTranslit/TransliteratorLive.cs) class. It has `AddChar` method that returns [`AddCharResult`](https://github.com/eealeivan/jozh-translit/blob/master/Src/JoZhTranslit/AddCharResult.cs) class which contains found grapheme and status ("instruction" of what to do with added char). `TransliteratorLive` saves previously added chars that allows to enter complex grapehemes such as `ch`, `shh` etc. 
 
 Lets check the next example:
-```charp
+```csharp
 var t = new TransliteratorLive(EnRu.MapJson);
 AddCharResult res1 = t.AddChar('C');
 AddCharResult res2 = t.AddChar('h');
@@ -50,7 +50,7 @@ Char | Status | Grapheme | Explanation
 **'!'** | NoGraphemeFound | **NULL** | We can't find anything for **"j!"** and **"!"** so status says that grapheme was not found and grapheme itslef is null.
 
 There is also a `Reset` method. It will clear previously eneted chars in `TransliteratorLive`, so next char that you enter will be processed without a history:
-```charp
+```csharp
 var t = new TransliteratorLive(EnRu.MapJson);
 AddCharResult res1 = t.AddChar('C');
 t.Reset();
