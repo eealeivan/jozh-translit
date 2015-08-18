@@ -23,8 +23,7 @@ namespace JoZhTranslit
             }
 
             _inGrapheme.Append(c);
-            string outGrapheme = _translitData.FindGrapheme(
-                HashHelper.GetHashCodeAsCharArray(_inGrapheme));
+            string outGrapheme = _translitData.FindGrapheme(_inGrapheme.GetMutableHashCode());
 
             if (outGrapheme != null)
             {

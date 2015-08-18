@@ -11,12 +11,12 @@ namespace JoZhTranslit
 
         public TranslitData(string mapJson)
         {
-            IDictionary<string, string[]> map;
             if (String.IsNullOrWhiteSpace(mapJson))
             {
                 throw new ArgumentNullException("mapJson");
             }
 
+            IDictionary<string, string[]> map;
             try
             {
                 var serializer = new JavaScriptSerializer();
@@ -33,7 +33,7 @@ namespace JoZhTranslit
             {
                 foreach (string valueEntry in mapEntry.Value)
                 {
-                    _reverseMap[HashHelper.GetHashCodeAsCharArray(valueEntry)] = mapEntry.Key;
+                    _reverseMap[new CharArray(valueEntry).GetMutableHashCode()] = mapEntry.Key;
                     if (valueEntry.Length > maxGraphemeLength)
                     {
                         maxGraphemeLength = valueEntry.Length;

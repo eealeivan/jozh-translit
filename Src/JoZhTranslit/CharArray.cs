@@ -2,6 +2,10 @@ using System;
 
 namespace JoZhTranslit
 {
+    /// <summary>
+    /// Lightweight version of a StringBuilder. If <see cref="GetMutableHashCode"/> is used
+    /// then capacity should be small. Used for holding grapheme char values.
+    /// </summary>
     internal sealed class CharArray
     {
         private readonly int _capacity;
@@ -16,6 +20,13 @@ namespace JoZhTranslit
             _capacity = capacity;
             _chars = new char[capacity];
             _length = 0;
+        }
+
+        public CharArray(string s)
+        {
+            _chars = s.ToCharArray();
+            _capacity = _chars.Length;
+            _length = _chars.Length;
         }
 
         public void Append(char c)
@@ -33,10 +44,26 @@ namespace JoZhTranslit
         {
             _length = 0;
         }
-
-        public int this[int index]
+        
+        /// <summary>
+        /// Calculates a hash code based on values of innech array of chars.
+        /// </summary>
+        public int GetMutableHashCode()
         {
-            get { return _chars[index]; }
+            if (_length <= 0)
+            {
+                return 0;
+            }
+
+            unchecked
+            {
+                int hash = _chars[0];
+                for (int i = 1; i < _length; i++)
+                {
+                    hash = hash * 397 ^ _chars[i];
+                }
+                return hash;
+            }
         }
     }
 }
