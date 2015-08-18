@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>jozh-translit</id>
+        <version>1.0.0</version>
+        <title>JoZh Translit</title>
+        <authors>Aleksandr Ivanov</authors>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/eealeivan/jozh-translit</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>An open source transliteration library for .NET. Can transliterate static texts and also can be used in "live" mode, which allows it to be connected with input fields.</description>
+		<tags>translit, transliteration</tags>
+    </metadata>   
+</package>
