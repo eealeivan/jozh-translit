@@ -11,7 +11,7 @@ namespace JoZhTranslit
 
         public TranslitData(string mapJson)
         {
-            if (String.IsNullOrWhiteSpace(mapJson))
+            if (String.IsNullOrEmpty(mapJson))
             {
                 throw new ArgumentNullException("mapJson");
             }

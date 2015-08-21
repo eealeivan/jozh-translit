@@ -18,8 +18,8 @@ properties {
   $workingDir = "$baseDir\$workingName"
   $builds = @(  
     @{Name = "JoZhTranslit"; TestsName = "JoZhTranslit.Tests"; Constants=""; FinalDir="Net45"; NuGetDir = "net45"; Framework="net-4.5.1"; Sign=$false},
-    @{Name = "JoZhTranslit.Net40"; TestsName = "JoZhTranslit.Tests.Net40"; Constants="NET40"; FinalDir="Net40"; NuGetDir = "net40"; Framework="net-4.0"; Sign=$false}
-    ##@{Name = "JoZhTranslit.Net35"; TestsName = "JoZhTranslit.Tests.Net35"; Constants="NET35"; FinalDir="Net35"; NuGetDir = "net35"; Framework="net-2.0"; Sign=$false}  
+    @{Name = "JoZhTranslit.Net40"; TestsName = "JoZhTranslit.Tests.Net40"; Constants="NET40"; FinalDir="Net40"; NuGetDir = "net40"; Framework="net-4.0"; Sign=$false},
+    @{Name = "JoZhTranslit.Net35"; TestsName = "JoZhTranslit.Tests.Net35"; Constants="NET35"; FinalDir="Net35"; NuGetDir = "net35"; Framework="net-3.5"; Sign=$false}  
   )
 }
 
