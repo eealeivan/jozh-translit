@@ -23,6 +23,7 @@ using System.Runtime.InteropServices;
 [assembly: Guid("0cad48c3-0200-4ed3-a2b5-7df638dc1c00")]
 
 [assembly: InternalsVisibleTo("JoZhTranslit.Tests")]
+[assembly: InternalsVisibleTo("JoZhTranslit.Tests.Net40")]
 
 // Version information for an assembly consists of the following four values:
 //
