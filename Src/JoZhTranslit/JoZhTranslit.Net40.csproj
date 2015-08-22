@@ -39,6 +39,7 @@
     <Compile Include="AddCharResult.cs" />
     <Compile Include="AddCharStatus.cs" />
     <Compile Include="CharArray.cs" />
+    <Compile Include="JsonSerializer.cs" />
     <Compile Include="TranslitData.cs" />
     <Compile Include="TransliterationMaps\EnRu.cs" />
     <Compile Include="Transliterator.cs" />

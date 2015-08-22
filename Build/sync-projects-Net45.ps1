@@ -12,5 +12,6 @@ Invoke-Expression "& `"$syncProjectsPath`" $projectsParams"
 $testProjectsPath = "'" + $path + "\..\Src\JoZhTranslit.Tests" + "'"
 $testProjectsParams = @(
   "-projectsPath", $testProjectsPath, 
-  "-sourceProject", "JoZhTranslit.Tests.csproj")
+  "-sourceProject", "JoZhTranslit.Tests.csproj",
+  "-syncReferences")
 Invoke-Expression "& `"$syncProjectsPath`" $testProjectsParams"

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Web.Script.Serialization;
 
 namespace JoZhTranslit
 {
@@ -19,8 +18,7 @@ namespace JoZhTranslit
             IDictionary<string, string[]> map;
             try
             {
-                var serializer = new JavaScriptSerializer();
-                map = serializer.Deserialize<IDictionary<string, string[]>>(mapJson);
+                map = JsonSerializer.DeserializeGraphemesMap(mapJson);
             }
             catch (Exception e)
             {
