@@ -17,9 +17,10 @@ properties {
   $releaseDir = "$baseDir\Release"
   $workingDir = "$baseDir\$workingName"
   $builds = @(  
-    @{Name = "JoZhTranslit"; TestsName = "JoZhTranslit.Tests"; Constants=""; FinalDir="Net45"; NuGetDir = "net45"; Framework="net-4.5.1"; Sign=$false},
+    @{Name = "JoZhTranslit"; TestsName = "JoZhTranslit.Tests"; Constants=""; FinalDir="Net45"; NuGetDir = "net45"; Framework="net-4.5"; Sign=$false},
     @{Name = "JoZhTranslit.Net40"; TestsName = "JoZhTranslit.Tests.Net40"; Constants="NET40"; FinalDir="Net40"; NuGetDir = "net40"; Framework="net-4.0"; Sign=$false},
-    @{Name = "JoZhTranslit.Net35"; TestsName = "JoZhTranslit.Tests.Net35"; Constants="NET35"; FinalDir="Net35"; NuGetDir = "net35"; Framework="net-3.5"; Sign=$false}  
+    @{Name = "JoZhTranslit.Net35"; TestsName = "JoZhTranslit.Tests.Net35"; Constants="NET35"; FinalDir="Net35"; NuGetDir = "net35"; Framework="net-3.5"; Sign=$false},
+    @{Name = "JoZhTranslit.Portable"; TestsName = "JoZhTranslit.Tests.Portable"; Constants="PORTABLE"; FinalDir="Portable"; NuGetDir = "portable-net45+netcore45+wpa81+wp8"; Framework="net-4.5"; Sign=$false}
   )
 }
 
