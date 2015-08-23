@@ -58,7 +58,7 @@ namespace JoZhTranslit
         }
         
         /// <summary>
-        /// Calculates a hash code based on values of innech array of chars.
+        /// Calculates a hash code based on values of inner array of chars.
         /// </summary>
         public int GetMutableHashCode()
         {

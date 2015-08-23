@@ -134,7 +134,7 @@ namespace JoZhTranslit
                         break;
 
                     case ParseState.Ended:
-                        throw new MapJsonParseException();
+                        throw new MapJsonParseException(string.Format("Invalid character '{0}'", c));
 
                     default:
                         throw new ArgumentOutOfRangeException(string.Format("Invalid character '{0}'", c));
@@ -170,5 +170,4 @@ namespace JoZhTranslit
             }
         }
     }
-
 }

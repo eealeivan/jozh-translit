@@ -1,7 +1,13 @@
 ﻿namespace JoZhTranslit.TransliterationMaps
 {
+    /// <summary>
+    /// Contains graphemes map for transliterating from english to russian.
+    /// </summary>
     public class EnRu
     {
+        /// <summary>
+        /// Graphemes map for transliterating from english to russian.
+        /// </summary>
         public const string MapJson =
             @"
 {

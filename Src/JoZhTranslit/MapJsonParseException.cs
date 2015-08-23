@@ -1,7 +1,11 @@
-using System;
+﻿using System;
 
 namespace JoZhTranslit
 {
+    /// <summary>
+    /// Indicates that provided graphemes map is not in correct format.
+    /// Example: { "б": ["b"], "ё": ["jo", "yo"] }
+    /// </summary>
     public class MapJsonParseException : Exception
     {
         internal MapJsonParseException()
