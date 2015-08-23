@@ -14,20 +14,17 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
+#if !(PORTABLE || PORTABLE40)
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
-#if !(PORTABLE || PORTABLE40)
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("0cad48c3-0200-4ed3-a2b5-7df638dc1c00")]
 #endif
 
 [assembly: InternalsVisibleTo("JoZhTranslit.Tests")]
-[assembly: InternalsVisibleTo("JoZhTranslit.Tests.Net40")]
-[assembly: InternalsVisibleTo("JoZhTranslit.Tests.Net35")]
-[assembly: InternalsVisibleTo("JoZhTranslit.Tests.Portable")]
 
 // Version information for an assembly consists of the following four values:
 //

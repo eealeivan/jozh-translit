@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoZhTranslit.Portable40", "JoZhTranslit\JoZhTranslit.Portable40.csproj", "{352796B5-E327-4B0E-AF2D-376D61430FFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoZhTranslit.Tests.Portable40", "JoZhTranslit.Tests\JoZhTranslit.Tests.Portable40.csproj", "{0E66D726-6A61-4C53-AEF6-52F4AD6DE501}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{352796B5-E327-4B0E-AF2D-376D61430FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352796B5-E327-4B0E-AF2D-376D61430FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352796B5-E327-4B0E-AF2D-376D61430FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352796B5-E327-4B0E-AF2D-376D61430FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E66D726-6A61-4C53-AEF6-52F4AD6DE501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E66D726-6A61-4C53-AEF6-52F4AD6DE501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E66D726-6A61-4C53-AEF6-52F4AD6DE501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E66D726-6A61-4C53-AEF6-52F4AD6DE501}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
