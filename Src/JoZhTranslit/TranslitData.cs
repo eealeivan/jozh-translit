@@ -5,7 +5,7 @@ namespace JoZhTranslit
 {
     internal sealed class TranslitData
     {
-        private readonly IDictionary<int, string> _reverseMap;
+        private readonly IDictionary<int, string> _graphemesMap;
         private readonly int _maxGraphemeLength;
 
         public TranslitData(string mapJson)
@@ -15,31 +15,10 @@ namespace JoZhTranslit
                 throw new ArgumentNullException("mapJson");
             }
 
-            IDictionary<string, string[]> map;
-            try
-            {
-                map = JsonSerializer.DeserializeGraphemesMap(mapJson);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error parsing 'mapJson' argument.", e);
-            }
+            var parseResult = JsonMapParser.Parse(mapJson);
 
-            _reverseMap = new Dictionary<int, string>();
-            int maxGraphemeLength = 0;
-            foreach (var mapEntry in map)
-            {
-                foreach (string valueEntry in mapEntry.Value)
-                {
-                    _reverseMap[new CharArray(valueEntry).GetMutableHashCode()] = mapEntry.Key;
-                    if (valueEntry.Length > maxGraphemeLength)
-                    {
-                        maxGraphemeLength = valueEntry.Length;
-                    }
-                }
-            }
-
-            _maxGraphemeLength = maxGraphemeLength;
+            _graphemesMap = parseResult.GraphemesMap;
+            _maxGraphemeLength = parseResult.MaxGraphemeLength;
         }
 
         public int MaxGraphemeLength
@@ -50,7 +29,7 @@ namespace JoZhTranslit
         public string FindGrapheme(int inGraphemeHash)
         {
             string outGrapheme;
-            _reverseMap.TryGetValue(inGraphemeHash, out outGrapheme);
+            _graphemesMap.TryGetValue(inGraphemeHash, out outGrapheme);
             return outGrapheme;
         }
     }

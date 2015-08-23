@@ -36,14 +36,13 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddCharResult.cs" />
     <Compile Include="AddCharStatus.cs" />
     <Compile Include="CharArray.cs" />
-    <Compile Include="JsonSerializer.cs" />
+    <Compile Include="JsonMapParser.cs" />
+    <Compile Include="MapJsonParseException.cs" />
     <Compile Include="TranslitData.cs" />
     <Compile Include="TransliterationMaps\EnRu.cs" />
     <Compile Include="Transliterator.cs" />

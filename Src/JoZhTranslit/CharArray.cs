@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace JoZhTranslit
 {
@@ -27,6 +28,17 @@ namespace JoZhTranslit
             _chars = s.ToCharArray();
             _capacity = _chars.Length;
             _length = _chars.Length;
+        }
+
+        public CharArray(StringBuilder sb)
+        {
+            _length = sb.Length;
+            _capacity = _length;
+            _chars = new char[_length];
+            for (int i = 0; i < _length; i++)
+            {
+                _chars[i] = sb[i];
+            }
         }
 
         public void Append(char c)
