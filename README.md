@@ -1,5 +1,5 @@
 # jozh-translit [![NuGet Version](http://img.shields.io/nuget/v/jozh-translit.svg?style=flat)](https://www.nuget.org/packages/jozh-translit/)
-`jozh-translit` is a .NET [transliteration](https://en.wikipedia.org/wiki/Transliteration) library. Can be used to transliterate static texts and also to work in "live" mode. Supported platforms: .NET 3.5, .NET 4, .NET 4.5, .NET Portable (.NET 4 / .NET 4.5, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8).
+`jozh-translit` is a .NET [transliteration](https://en.wikipedia.org/wiki/Transliteration) library. Can be used to transliterate static texts and also to work in "live" mode. Supported platforms: .NET 3.5, .NET 4, .NET 4.5 and .NET Portable (.NET 4 / .NET 4.5, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8).
 
 ## Sample usage
 ```csharp
@@ -9,7 +9,7 @@ var res = t.Transliterate("Shhuchka i jozh bol'shie druz'ja!");
 ```
 
 ## Supported transliteration maps
-Currently the only built-in map is [´en->ru´](https://github.com/eealeivan/jozh-translit/blob/master/Src/JoZhTranslit/TransliterationMaps/EnRu.cs), but you can easily provide your own maps. Map should be a JSON object with following structure:
+Currently the only built-in map is [´English to Russian´](https://github.com/eealeivan/jozh-translit/blob/master/Src/JoZhTranslit/TransliterationMaps/EnRu.cs), but you can easily provide your own maps. Map should be a JSON object with following structure:
 ```json
 {
 	"А": ["A"],
