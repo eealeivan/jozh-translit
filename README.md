@@ -1,5 +1,5 @@
 # jozh-translit [![NuGet Version](http://img.shields.io/nuget/v/jozh-translit.svg?style=flat)](https://www.nuget.org/packages/jozh-translit/)
-`jozh-translit` is a .NET [transliteration](https://en.wikipedia.org/wiki/Transliteration) library. Can be used to transliterate static texts and also to work in "live" mode. Supported platforms: NET 3.5, NET 4, NET 4.5, .NET Portable (.NET 4 / .NET 4.5, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8).
+`jozh-translit` is a .NET [transliteration](https://en.wikipedia.org/wiki/Transliteration) library. Can be used to transliterate static texts and also to work in "live" mode. Supported platforms: .NET 3.5, .NET 4, .NET 4.5, .NET Portable (.NET 4 / .NET 4.5, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8).
 
 ## Sample usage
 ```csharp
