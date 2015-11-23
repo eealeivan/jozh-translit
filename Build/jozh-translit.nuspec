@@ -8,7 +8,7 @@
         <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>https://github.com/eealeivan/jozh-translit</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>An open source transliteration library for .NET. Can transliterate static texts and also can be used in "live" mode, which allows it to be connected with input fields.</description>
-		<tags>translit, transliteration</tags>
+        <description>An open source transliteration library for .NET that can transliterate static texts and also can be used in "live" mode, which allows it to be connected with input fields. Supported platforms: .NET 3.5, .NET 4, .NET 4.5 and .NET Portable (.NET 4 / .NET 4.5, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8).</description>
+		<tags>translit, transliteration, text, conversion, .NET, portable, silverlight, windows8, windowsphone8</tags>
     </metadata>   
 </package>
